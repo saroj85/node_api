@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const hourly = sequelize.define('hourly', {
+    const hourly_services = sequelize.define('hourly_services', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
-        packagetype: DataTypes.STRING,
-        techonology: DataTypes.STRING,
+        package_type: DataTypes.STRING,
+        technology: DataTypes.STRING,
         name: DataTypes.STRING,
         email: DataTypes.STRING,
         phone: DataTypes.STRING,
@@ -21,5 +21,5 @@ module.exports = (sequelize, DataTypes) => {
     }
     );
 
-    return hourly;
+    return hourly_services;
 };

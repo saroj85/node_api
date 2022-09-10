@@ -1,9 +1,9 @@
 module.exports = {
     DATABASE: {
-        host: '127.0.0.1',
-        username: "root",
-        password: '123456789',
-        database: "blog_db",
+        host: process.env.HOST,
+        username: process.env.DBUSER,
+        password: process.env.DBPASS,
+        database: process.env.DATABASE,
         dialect: 'mysql',
         multipleStatements: true,
         timezone: '+05:30',

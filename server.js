@@ -1,11 +1,13 @@
 const dotenv = require('dotenv');
+const path = require('path');
 
-dotenv.config({ path: `${process.env.NODE_ENV}.env` });
+const env_file_name = path.join(__dirname,'.env');
+require('dotenv').config({ path: env_file_name });
+
 
 const app = require('./app');
 const { LOGS_LEVEL } = require('./utils/constants');
 const { log } = require('./utils/log');
-
 
 const port = process.env.PORT || 8080;
 
