@@ -33,7 +33,7 @@ db.sequelize = sequelize;
 
 
 
-(function connect_database() {
+function connect_database() {
     sequelize
     .authenticate()
     .then(() => {
@@ -43,8 +43,8 @@ db.sequelize = sequelize;
         log('Unable to connect to the database:' + error, LOGS_LEVEL.ERROR);
     });
   
-} ());
+};
 
-db.product_category.hasMany(db.product, { as: 'Category', foreignKey: 'product_category_id' })
+connect_database()
 
 module.exports.db = db;

@@ -7,9 +7,7 @@ const { LOGS_LEVEL } = require('./utils/constants');
 const { log } = require('./utils/log');
 
 
-const { db } = require('./models');
-
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 //  Starting the server
 app.listen(port, () => {
